@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBARModelStoreContainer" CdmEntityContainer="DBAREntities">
+    <EntitySetMapping Name="TBDeps">
+      <EntityTypeMapping TypeName="DBARModel.TBDep">
+        <MappingFragment StoreEntitySet="TBDep">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepName" ColumnName="DepName" />
+          <ScalarProperty Name="DepDetailes" ColumnName="DepDetailes" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBUSERS">
+      <EntityTypeMapping TypeName="DBARModel.TBUSER">
+        <MappingFragment StoreEntitySet="TBUSERS">
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="DepName" ColumnName="DepName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="IDDep" ColumnName="IDDep" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBArchiveCategories">
+      <EntityTypeMapping TypeName="DBARModel.TBArchiveCategory">
+        <MappingFragment StoreEntitySet="TBArchiveCategory">
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="ArchiveDes" ColumnName="ArchiveDes" />
+          <ScalarProperty Name="ArchiveTitle" ColumnName="ArchiveTitle" />
+          <ScalarProperty Name="UserDep" ColumnName="UserDep" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBArchiveFiles">
+      <EntityTypeMapping TypeName="DBARModel.TBArchiveFile">
+        <MappingFragment StoreEntitySet="TBArchiveFiles">
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="FileSize5" ColumnName="FileSize5" />
+          <ScalarProperty Name="FileExt5" ColumnName="FileExt5" />
+          <ScalarProperty Name="FileFile5" ColumnName="FileFile5" />
+          <ScalarProperty Name="FileName5" ColumnName="FileName5" />
+          <ScalarProperty Name="FileSize4" ColumnName="FileSize4" />
+          <ScalarProperty Name="FileExt4" ColumnName="FileExt4" />
+          <ScalarProperty Name="FileFile4" ColumnName="FileFile4" />
+          <ScalarProperty Name="FileName4" ColumnName="FileName4" />
+          <ScalarProperty Name="FileSize3" ColumnName="FileSize3" />
+          <ScalarProperty Name="FileExt3" ColumnName="FileExt3" />
+          <ScalarProperty Name="FileFile3" ColumnName="FileFile3" />
+          <ScalarProperty Name="FileName3" ColumnName="FileName3" />
+          <ScalarProperty Name="FileSize2" ColumnName="FileSize2" />
+          <ScalarProperty Name="FileExt2" ColumnName="FileExt2" />
+          <ScalarProperty Name="FileFile2" ColumnName="FileFile2" />
+          <ScalarProperty Name="FileName2" ColumnName="FileName2" />
+          <ScalarProperty Name="FileSize1" ColumnName="FileSize1" />
+          <ScalarProperty Name="FileExt1" ColumnName="FileExt1" />
+          <ScalarProperty Name="FileFile1" ColumnName="FileFile1" />
+          <ScalarProperty Name="FileName1" ColumnName="FileName1" />
+          <ScalarProperty Name="ArchDetails" ColumnName="ArchDetails" />
+          <ScalarProperty Name="ArchReciver" ColumnName="ArchReciver" />
+          <ScalarProperty Name="ArchSender" ColumnName="ArchSender" />
+          <ScalarProperty Name="ArchDate" ColumnName="ArchDate" />
+          <ScalarProperty Name="ArchNumber" ColumnName="ArchNumber" />
+          <ScalarProperty Name="ArchTitle" ColumnName="ArchTitle" />
+          <ScalarProperty Name="ArchDep" ColumnName="ArchDep" />
+          <ScalarProperty Name="IDArchive" ColumnName="IDArchive" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

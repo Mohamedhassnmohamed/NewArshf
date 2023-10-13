@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5D09F5C-29B0-44E7-9D27-E8B1FA47F583}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Arshf</RootNamespace>
+    <AssemblyName>Arshf</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.2" />
+    <Reference Include="DevExpress.Data.Desktop.v20.2" />
+    <Reference Include="DevExpress.Data.v20.2" />
+    <Reference Include="DevExpress.Utils.v20.2" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2" />
+    <Reference Include="DevExpress.Printing.v20.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addpage\AddArchiveCateogory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addpage\AddArchiveCateogory.Designer.cs">
+      <DependentUpon>AddArchiveCateogory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addpage\AddFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addpage\AddFile.Designer.cs">
+      <DependentUpon>AddFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addpage\AddNewFileFromHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addpage\AddNewFileFromHome.Designer.cs">
+      <DependentUpon>AddNewFileFromHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addpage\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addpage\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addpage\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addpage\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addpage\AddDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addpage\AddDep.Designer.cs">
+      <DependentUpon>AddDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBAR.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBAR.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBAR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBAR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBAR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBAR.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ArchiveCatPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pages\ArchiveCatPage.Designer.cs">
+      <DependentUpon>ArchiveCatPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\SearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\.Designer.cs">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\UsersPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pages\UsersPage.Designer.cs">
+      <DependentUpon>UsersPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\DepPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pages\DepPage.Designer.cs">
+      <DependentUpon>DepPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pages\HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pages\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ConncetionStringSection.cs" />
+    <Compile Include="PL\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ShowFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ShowFiles.Designer.cs">
+      <DependentUpon>ShowFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ArchiveFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ArchiveFileForm.Designer.cs">
+      <DependentUpon>ArchiveFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TBArchiveCategory.cs">
+      <DependentUpon>DBAR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBArchiveFile.cs">
+      <DependentUpon>DBAR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBDep.cs">
+      <DependentUpon>DBAR.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBUSER.cs">
+      <DependentUpon>DBAR.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Addpage\AddArchiveCateogory.resx">
+      <DependentUpon>AddArchiveCateogory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addpage\AddFile.resx">
+      <DependentUpon>AddFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addpage\AddNewFileFromHome.resx">
+      <DependentUpon>AddNewFileFromHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addpage\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addpage\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addpage\AddDep.resx">
+      <DependentUpon>AddDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\ArchiveCatPage.resx">
+      <DependentUpon>ArchiveCatPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\SearchResult.resx">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\UsersPage.resx">
+      <DependentUpon>UsersPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\DepPage.resx">
+      <DependentUpon>DepPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ShowFiles.resx">
+      <DependentUpon>ShowFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ArchiveFileForm.resx">
+      <DependentUpon>ArchiveFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <EntityDeploy Include="DBAR.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBAR.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBAR.edmx.diagram">
+      <DependentUpon>DBAR.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodepartment_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publicfix_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectfile_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usergroup_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edittask_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBAR.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DBAR.Context.cs</LastGenOutput>
+      <DependentUpon>DBAR.edmx</DependentUpon>
+    </Content>
+    <Content Include="DBAR.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBAR.edmx</DependentUpon>
+      <LastGenOutput>DBAR.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\changeview_32x32.png" />
+    <None Include="Resources\apply_32x321.png" />
+    <None Include="Resources\export_32x32.png" />
+    <None Include="Resources\attachment_32x321.png" />
+    <None Include="Resources\loadfrom_32x32.png" />
+    <None Include="Resources\next_32x32.png" />
+    <None Include="Resources\attachment_32x32.png" />
+    <None Include="Resources\showproduct_32x32.png" />
+    <None Include="Resources\addfile_32x32.png" />
+    <None Include="Resources\apply_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

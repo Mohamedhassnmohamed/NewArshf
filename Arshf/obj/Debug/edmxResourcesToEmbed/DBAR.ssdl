@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBARModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBArchiveCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserDep" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArchiveTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArchiveDes" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TBArchiveFiles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDArchive" Type="int" />
+    <Property Name="ArchDep" Type="nvarchar" MaxLength="50" />
+    <Property Name="ArchTitle" Type="nvarchar(max)" />
+    <Property Name="ArchNumber" Type="nvarchar(max)" />
+    <Property Name="ArchDate" Type="datetime" />
+    <Property Name="ArchSender" Type="nvarchar(max)" />
+    <Property Name="ArchReciver" Type="nvarchar(max)" />
+    <Property Name="ArchDetails" Type="nvarchar(max)" />
+    <Property Name="FileName1" Type="nvarchar(max)" />
+    <Property Name="FileFile1" Type="varbinary(max)" />
+    <Property Name="FileExt1" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileSize1" Type="float" />
+    <Property Name="FileName2" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileFile2" Type="varbinary(max)" />
+    <Property Name="FileExt2" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileSize2" Type="float" />
+    <Property Name="FileName3" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileFile3" Type="varbinary(max)" />
+    <Property Name="FileExt3" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileSize3" Type="float" />
+    <Property Name="FileName4" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileFile4" Type="varbinary(max)" />
+    <Property Name="FileExt4" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileSize4" Type="float" />
+    <Property Name="FileName5" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileFile5" Type="varbinary(max)" />
+    <Property Name="FileExt5" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileSize5" Type="float" />
+    <Property Name="AddDate" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TBDep">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepName" Type="nvarchar(max)" />
+    <Property Name="DepDetailes" Type="nvarchar(max)" />
+    <Property Name="AddDate" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TBUSERS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDDep" Type="int" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserRole" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddDate" Type="datetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="FK_TBArchiveCategory_TBUSERS">
+    <End Role="TBUSERS" Type="Self.TBUSERS" Multiplicity="0..1" />
+    <End Role="TBArchiveCategory" Type="Self.TBArchiveCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBUSERS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBArchiveCategory">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBArchiveFiles_TBArchiveCategory">
+    <End Role="TBArchiveCategory" Type="Self.TBArchiveCategory" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TBArchiveFiles" Type="Self.TBArchiveFiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBArchiveCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBArchiveFiles">
+        <PropertyRef Name="IDArchive" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBUSERS_TBDep">
+    <End Role="TBDep" Type="Self.TBDep" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TBUSERS" Type="Self.TBUSERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBDep">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBUSERS">
+        <PropertyRef Name="IDDep" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBARModelStoreContainer">
+    <EntitySet Name="TBArchiveCategory" EntityType="Self.TBArchiveCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBArchiveFiles" EntityType="Self.TBArchiveFiles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBDep" EntityType="Self.TBDep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBUSERS" EntityType="Self.TBUSERS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBArchiveCategory_TBUSERS" Association="Self.FK_TBArchiveCategory_TBUSERS">
+      <End Role="TBUSERS" EntitySet="TBUSERS" />
+      <End Role="TBArchiveCategory" EntitySet="TBArchiveCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBArchiveFiles_TBArchiveCategory" Association="Self.FK_TBArchiveFiles_TBArchiveCategory">
+      <End Role="TBArchiveCategory" EntitySet="TBArchiveCategory" />
+      <End Role="TBArchiveFiles" EntitySet="TBArchiveFiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBUSERS_TBDep" Association="Self.FK_TBUSERS_TBDep">
+      <End Role="TBDep" EntitySet="TBDep" />
+      <End Role="TBUSERS" EntitySet="TBUSERS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
